@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Snacks List</title>
+</head>
+
+<body class="bg-green-50">
+    <header class="bg-green-100 text-4xl text-blue-900">
+        <nav>
+            <ul class="list-outside list-none overflow-hidden p-2">
+                <li class="float-left"><a class="block px-6" href="{% url 'snack_list' %}">Snack List</a></li>
+                <li class="float-left"><a class="block px-6" href="{% url 'create_snack' %}">Create Snack</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock content %}
+    </main>
+    <footer class="bg-green-100 fixed w-full text-center left-0 bottom-0 text-4xl text-blue-900">
+        <p>&copy; yazan ahmad</p>
+    </footer>
+
+</body>
+
+</html>
